@@ -11,9 +11,7 @@
 int main() {
   // Habilito USB
   stdio_init_all();
-
-  // Inicializacion del LCD
-  lcd_init();
+  // Inicializacion
   i2c_init(i2c0, 100 * 1000);
   // Elijo GPIO4 como linea de SDA
   gpio_set_function(4, GPIO_FUNC_I2C);
