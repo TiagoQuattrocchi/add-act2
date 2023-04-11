@@ -16,17 +16,6 @@ int main() {
   lcd_init();
   i2c_init(i2c0, 100 * 1000);
   // Elijo GPIO4 como linea de SDA
-  gpio_set_function(6, GPIO_FUNC_I2C);
-  // Elijo GPIO5 como linea de SCL
-  gpio_set_function(7, GPIO_FUNC_I2C);
-  // Activo pull-up en ambos GPIO, son debiles por lo que
-  // es recomendable usar pull-ups externas
-  gpio_pull_up(4);
-  gpio_pull_up(5);
-  // Inicializo BMP280
-  bmp280_init();
-  i2c_init(i2c0, 3.4 * 1000000);
-  // Elijo GPIO4 como linea de SDA
   gpio_set_function(4, GPIO_FUNC_I2C);
   // Elijo GPIO5 como linea de SCL
   gpio_set_function(5, GPIO_FUNC_I2C);
